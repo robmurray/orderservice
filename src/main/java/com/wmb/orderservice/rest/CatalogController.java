@@ -24,7 +24,7 @@ public class CatalogController {
     private final AtomicLong counter = new AtomicLong();
 
 
-    @ApiOperation(value = "catalogs", nickname = "catalogs")
+    @ApiOperation(value = "catalogs", notes="Returns a list of all available catalogs", nickname = "retrieve catalogs")
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Success", response = Catalog.class, responseContainer = "List"),
@@ -36,7 +36,7 @@ public class CatalogController {
         return productService.retrieveCatalogs();
     }
 
-    @ApiOperation(value = "catalogs", nickname = "catalogs")
+    @ApiOperation(value = "catalogs", notes="Returns a single instance of a Catalog", nickname = "catalogs")
     @RequestMapping(value = "/{catalogId}", method = {RequestMethod.GET})
     @ApiImplicitParams({
             @ApiImplicitParam(name = "catalogId", value = "the unique identifier of the catalog", required = true, dataType = "Long", paramType = "path")
