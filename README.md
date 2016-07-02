@@ -1,2 +1,2 @@
-# orderservice
+# productservice
 sample REST API
