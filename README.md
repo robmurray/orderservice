@@ -1,2 +1,2 @@
 # productservice
-sample REST API
+Simple REST endpoint for Proof of Concept Exercises
